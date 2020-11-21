@@ -1,0 +1,44 @@
+<html>
+    <link rel="stylesheet" href="../static/estiloweb/css/chat.css">
+    <link rel="stylesheet" href="../static/estiloweb/css/logueo.css">
+    <link rel="stylesheet" href="../static/estiloweb/js/main.js">
+    <script>
+        window.addEventListener('load', init, false);
+        function init() {
+            let div = document.querySelector('#ocultar-y-mostrar');
+            div.style.visibility = 'visible';
+            let boton = document.querySelector('#ocultar-mostrar');
+            boton.addEventListener('click', function (e) {
+                if(div.style.visibility === 'visible'){
+                    div.style.visibility = 'hidden';
+                }else{
+                    div.style.visibility = 'visible';
+                }
+            }, false);
+        }        
+    </script>
+    <body>
+        <h1><center> Universidad Politecnica de Amozoc </center></h1>
+        <div id='ocultar-y-mostrar'>               
+	       <div class="chatt" >
+               <div class="chateo">
+		           <div class="encabezado">
+                      <div class="close">
+                          <button id='ocultar-mostrar'><i class="fas fa-bars"></i>cerrar</button>                   
+                      </div>
+			          <p class="welcome">Chat UPAM, <b></b></p>			          	         
+			        </div>		
+                    {% for dudas in dudas%}
+		            <div id="cuadro" class="display-chat"><br>{{dudas.usuarios.idUsuario}}:{{dudas.Mensaje}}<br></div>
+			        <form  action="mensajerespuesta" method="POST">{%csrf_token%}
+				       <input name="respuesta" type="text" size="40" placeholder="Escriba su mensaje aqui.." align="right" />
+				       <input name="envio" type="submit" value="Enviar"/>
+                       <input type="hidden" name="ipeusua" value="{{dudas.Ip}}"/>
+                       {% endfor %}
+			        </form>	
+
+	            </div>
+            </div>          
+        </div>
+    </body>
+</html>

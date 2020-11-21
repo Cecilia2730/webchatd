@@ -1,0 +1,24 @@
+<html>
+    <link rel="stylesheet" href="../static/estiloweb/css/chat.css">
+	<link rel="stylesheet" href="../static/estiloweb/css/logueo.css">
+    <body>
+	
+	    <h1><center> Universidad Politecnica de Amozoc </center></h1>
+		<div class="chatt">
+			   <div class="chateo">
+				  <div class="encabezado">
+					<div class="close"><button class="close" type="button" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button></div>
+					 <p class="welcome">Chat UPAM, <b></b></p>			  	 	
+				  </div>
+				  
+				  <div id="cuadro" class="display-chat"><br>{{mn.Mensaje}}<br></div>
+
+				  <form  action="mensajeEnviado" method="POST">{%csrf_token%}
+				  	<input type="hidden" name="direccion" value="{{ request.META.REMOTE_ADDR}}" /> 
+					<input name="duda" type="text" size="40" placeholder="Escriba su mensaje aqui.." align="right" />
+					<input name="envio" type="submit" value="Enviar"/>					 
+				  </form>
+			   </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+    <link rel="stylesheet" href="../static/estiloweb/css/estilo.css">
+    <link rel="stylesheet" href="../static/estiloweb/css/logueo.css">
+    <link rel="stylesheet" href="../static/estiloweb/css/alertify.core.css">
+    <link rel="stylesheet" href="../static/estiloweb/css/alertify.default.css">
+    <script src="../static/estiloweb/css/alertify.min.js"></script>
+    <h1><center> Universidad Politecnica de Amozoc </center></h1>
+	<br>
+	<div class="chat">
+        <div class="cuadro">
+            <p>Registro de usuario</p>
+            <form  method="POST" >{%csrf_token%}
+                {{ form.as_p }}               
+                <input name="envio" type="submit" value="Enviar"/>
+            </form>
+	    </div>
+    </div>
+</body>
+</html>

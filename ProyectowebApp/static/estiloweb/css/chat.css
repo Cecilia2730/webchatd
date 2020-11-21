@@ -1,0 +1,90 @@
+input[type="submit"] {
+   color: #ffffff;
+   background: #000000;
+   width: 80px;
+   margin-top: 0;
+   border: 0;
+   border-radius: 1px;
+   cursor: pointer;
+   text-align: center;
+ }
+
+ input[type="text"] {
+   color: #000000;
+   background: #ffffff;
+   width: 390px;
+   margin-top: 0;
+   border: 1px;
+   cursor: pointer;
+   
+ }
+ button{
+  background: red;
+ }
+
+.chateo{
+    margin:0 auto;
+    padding-bottom:25px;
+    background:#0000CC;
+    width:504px;
+    border:1px solid #ACD8F0;
+    position: relative; 
+    }
+
+.encabezado { 
+padding:10px 20px 10px 20px;
+text-align: center;
+font-family: Broadway; 
+font-size: 20px;
+position: relative;
+}
+
+.chatt{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal{
+width: 350px;
+height: 600px;
+background-color: white;
+border-radius: 1px;
+text-align: center;
+padding: 18px;
+position: relative;
+color: #ffffff;
+}
+
+#cuadro {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:20px;
+    padding:10px;
+    background:#fff;
+    height:200px;
+    width:380px;
+    border:1px solid #ACD8F0;
+    overflow:auto;
+    position: relative;
+     
+  }
+  
+.close{ float:right; }
+
+.display-chat{
+    height:300px;
+    background-color:#d69de0;
+    margin-bottom:4%;
+    overflow:auto;
+    padding:15px;
+  }
+
+.btn-minimize{
+  height: 20px;
+  width: 20px;
+}
